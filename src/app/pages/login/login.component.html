@@ -1,1 +1,28 @@
-login
+<div class="example-container">
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Email"
+      type="email"
+      name="userEmail"
+      [(ngModel)]="userEmail"
+      required>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard">
+    <input
+      matInput placeholder="Password"
+      type="password"
+      name="userPassword"
+      [(ngModel)]="userPassword"
+      required>
+  </mat-form-field>
+
+  <button
+    (click)="onLogIn(userEmail, userPassword)"
+    color="warn"
+    mat-flat-button>
+    Log In
+  </button>
+
+</div>
