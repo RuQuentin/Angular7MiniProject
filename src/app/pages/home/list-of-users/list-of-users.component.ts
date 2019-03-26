@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { ListOfUsersService } from './list-of-users.service';
 import { OnInit } from '@angular/core';
 import { IUser } from '../../../shared/interfaces/user';
@@ -10,7 +10,7 @@ import { IUser } from '../../../shared/interfaces/user';
 })
 export class ListOfUsersComponent implements OnInit {
   listOfUsers: IUser[] = [];
-  displayedColumns: string[] = ['id', 'first_name', 'last_name']
+  displayedColumns: string[] = ['id', 'first_name', 'last_name', 'avatar']
   pageCounter: number = 1;
 
   constructor(
@@ -19,7 +19,7 @@ export class ListOfUsersComponent implements OnInit {
 
   ngOnInit() {
     this.getListOfUsers();
-  }
+  };
 
   getListOfUsers() {
     this.listOfUsersService.getUsers(this.pageCounter)
@@ -36,4 +36,7 @@ export class ListOfUsersComponent implements OnInit {
       )
   };
 
+  chooseUser(user) {
+    this.listOfUsersService.setCurrentUser(user);
+  }
 }

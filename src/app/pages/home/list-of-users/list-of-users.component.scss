@@ -5,3 +5,14 @@ table {
 tr[mat-row] {
   cursor: pointer;
 }
+
+.avatar-wrapper {
+  height: 30px;
+}
+
+.avatar {
+  display: inline-block;
+  max-width: 30px;
+  height: auto;
+  border-radius: 50%;
+}

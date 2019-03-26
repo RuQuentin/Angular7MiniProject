@@ -21,7 +21,7 @@ export class LoginComponent {
             this.loginService.setToken(data)
             this.router.navigate(['/home'])
           },
-          error => {
+          error => {  
             this.loginService.deleteToken()
           })
   }

@@ -1,7 +1,8 @@
 // import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from '../../app-routing.module';
 
 
@@ -19,15 +20,16 @@ import { UserInfoComponent } from './user-info/user-info.component';
   ],
   imports: [
     MatTableModule,
+    MatCardModule,
     AppRoutingModule
   ],
   providers: [
     ListOfUsersService
   ],
   exports: [
-    HomeComponent,
-    ListOfUsersComponent,
-    UserInfoComponent
+    // HomeComponent,
+    // ListOfUsersComponent,
+    // UserInfoComponent
   ]
 })
 export class HomeModule {}

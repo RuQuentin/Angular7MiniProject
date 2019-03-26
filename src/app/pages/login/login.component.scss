@@ -1,9 +1,11 @@
-.example-container {
+.login-form-wrapper {
   display: flex;
   flex-direction: column;
   width: 300px;
+
+  margin: 20% auto;
 }
 
-.example-container > * {
+.login-form-wrapper > * {
   width: 100%;
 }
