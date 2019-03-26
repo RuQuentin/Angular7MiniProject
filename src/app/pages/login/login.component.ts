@@ -18,11 +18,11 @@ export class LoginComponent {
     this.loginService.sendRequest(email, password)
       .subscribe(
           data => {
-            this.loginService.setToken(data)
-            this.router.navigate(['/home'])
+            this.loginService.setToken(data);
+            this.router.navigate(['/home']);
           },
           error => {  
-            this.loginService.deleteToken()
+            this.loginService.deleteToken();
           })
   }
 }

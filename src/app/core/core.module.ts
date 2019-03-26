@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { UserHasTokenGuard } from './guards/user-has-token.guard';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
     NgxWebstorageModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    UserHasTokenGuard
+  ],
   bootstrap: [],
   exports: [
     MatToolbarModule

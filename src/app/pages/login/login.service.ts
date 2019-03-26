@@ -24,10 +24,10 @@ export class LoginService {
   }
 
   setToken(data: IToken): void {
-    this.localStorage.store('token', data)
+    console.log(this.localStorage.store('token', data))
   }
 
   deleteToken(): void {
-    this.localStorage.clear('token')
+    console.log(this.localStorage.clear('token'))
   }
 }
