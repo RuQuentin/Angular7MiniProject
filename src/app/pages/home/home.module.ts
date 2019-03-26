@@ -2,8 +2,10 @@
 import { NgModule } from '@angular/core';
 
 import {MatTableModule} from '@angular/material/table';
+import { AppRoutingModule } from '../../app-routing.module';
 
-import { ListOfUsersService } from './list-of-users/list-of-users.service'
+
+import { ListOfUsersService } from './list-of-users/list-of-users.service';
 
 import { HomeComponent } from './home.component';
 import { ListOfUsersComponent } from './list-of-users/list-of-users.component';
@@ -16,7 +18,8 @@ import { UserInfoComponent } from './user-info/user-info.component';
     UserInfoComponent
   ],
   imports: [
-    MatTableModule
+    MatTableModule,
+    AppRoutingModule
   ],
   providers: [
     ListOfUsersService
