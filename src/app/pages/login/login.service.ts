@@ -8,10 +8,10 @@ import { LocalStorageService } from 'ngx-webstorage';
 
 @Injectable()
 export class LoginService {
-
-  constructor(private http: HttpClient, private localStorage: LocalStorageService) {
-
-  }
+  constructor(
+    private http: HttpClient,
+    private localStorage: LocalStorageService
+    ) {}
 
   sendRequest(email, password): Observable<IToken> {
     let body: Object = {};
